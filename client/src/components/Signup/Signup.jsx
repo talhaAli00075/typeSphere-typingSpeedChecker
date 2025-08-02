@@ -23,7 +23,6 @@ const Signup = () => {
   };
   const handleSubmit = async(e) => {
     e.preventDefault();
-    // Handle form submission
     if(form.confirmPassword !== form.password) {
     toast.error("Passwords do not match!", {
       style: {

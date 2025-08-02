@@ -3,15 +3,15 @@ const nodemailer = require("nodemailer");
 const sendEmail = async ({ to, subject, html }) => {
   try {
     const transporter = nodemailer.createTransport({
-      service: process.env.SMTP_SERVICE, // just gmail
+      service: process.env.SMTP_SERVICE,
       auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS,
       },
-      debug: true, // log extra info for debugging
+      debug: true,
     });
 
-    // verify connection
+  
     await transporter.verify();
     console.log("SMTP transporter verified");
 
